@@ -22,7 +22,7 @@ public class Test1_1 {
         channel.configureBlocking(false);
 
         //如果两台物理计算机进行试验，则要把localhost改成服务端的IP地址
-        channel.bind(new InetSocketAddress("localhost", 8888));
+        channel.bind(new InetSocketAddress("10.1.68.27", 8888));
 
         Selector selector = Selector.open();
         SelectionKey selectionKey1 = channel.register(selector, SelectionKey.OP_READ);
