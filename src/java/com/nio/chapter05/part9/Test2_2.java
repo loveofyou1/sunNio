@@ -36,7 +36,7 @@ public class Test2_2 {
                     System.out.println("client isConnectable");
                     SocketChannel channel = (SocketChannel) key.channel();
                     byte[] writeDate = "我来自客户端，你好，服务端".getBytes();
-                    ByteBuffer byteBuffer = ByteBuffer.allocate(1000);
+                    ByteBuffer byteBuffer = ByteBuffer.wrap(writeDate);
                     channel.write(byteBuffer);
                     channel.close();
 
