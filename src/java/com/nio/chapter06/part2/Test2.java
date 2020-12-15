@@ -12,7 +12,7 @@ import java.net.Socket;
  */
 public class Test2 {
     public static void main(String[] args) throws IOException {
-        Socket socket = new Socket("localhost", 8888);
+        Socket socket = new Socket("localhost", 8088);
         OutputStream outputStream = socket.getOutputStream();
         outputStream.write("我来自客户端1".getBytes());
         outputStream.flush();
